@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobs | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="jobs.html" class="active">
+                Jobs
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="jobs-page-header">
+
+        <div class="jobs-page-header-content">
+
+            <span class="jobs-label">
+                CAREER OPPORTUNITIES
+            </span>
+
+            <h1>
+                Find your next
+                <span>opportunity</span>
+            </h1>
+
+            <p>
+                Discover jobs and internships from leading companies
+                and find the right opportunity for your career.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="jobs-search-section">
+
+        <div class="jobs-search-box">
+
+            <div class="jobs-search-input">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="titleSearch"
+                    placeholder="Job title, skills or keywords"
+                >
+
+            </div>
+
+
+            <div class="jobs-search-input">
+
+                <span>⌖</span>
+
+                <input
+                    type="text"
+                    id="locationSearch"
+                    placeholder="Location"
+                >
+
+            </div>
+
+
+            <button
+                type="button"
+                id="searchButton"
+                class="jobs-search-button"
+            >
+                Search Jobs
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN JOB AREA ================= -->
+
+    <main class="jobs-main">
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <aside class="jobs-filters">
+
+            <div class="filter-header">
+
+                <h3>
+                    Filters
+                </h3>
+
+                <button
+                    type="button"
+                    id="clearFilters"
+                >
+                    Clear all
+                </button>
+
+            </div>
+
+
+            <!-- JOB TYPE -->
+
+            <div class="filter-group">
+
+                <h4>
+                    Job Type
+                </h4>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="job-type-filter"
+                        value="Full Time"
+                    >
+                    Full Time
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="job-type-filter"
+                        value="Part Time"
+                    >
+                    Part Time
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="job-type-filter"
+                        value="Internship"
+                    >
+                    Internship
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="job-type-filter"
+                        value="Remote"
+                    >
+                    Remote
+                </label>
+
+            </div>
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="filter-group">
+
+                <h4>
+                    Experience
+                </h4>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="experience-filter"
+                        value="Fresher"
+                    >
+                    Fresher
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="experience-filter"
+                        value="0-2"
+                    >
+                    0–2 Years
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="experience-filter"
+                        value="2-4"
+                    >
+                    2–4 Years
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="experience-filter"
+                        value="4+"
+                    >
+                    4+ Years
+                </label>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="filter-group">
+
+                <h4>
+                    Popular Locations
+                </h4>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="location-filter"
+                        value="Pune"
+                    >
+                    Pune
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="location-filter"
+                        value="Mumbai"
+                    >
+                    Mumbai
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="location-filter"
+                        value="Bangalore"
+                    >
+                    Bangalore
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="location-filter"
+                        value="Hyderabad"
+                    >
+                    Hyderabad
+                </label>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= JOB RESULTS ================= -->
+
+        <section class="jobs-results">
+
+
+            <div class="jobs-results-header">
+
+                <div>
+
+                    <span class="section-label">
+                        AVAILABLE OPPORTUNITIES
+                    </span>
+
+                    <h2>
+                        Find your next job
+                    </h2>
+
+                    <p id="jobCount">
+                        Find opportunities that match your profile
+                    </p>
+
+                </div>
+
+
+                <select id="sortJobs">
+
+                    <option value="latest">
+                        Most Recent
+                    </option>
+
+                    <option value="company">
+                        Company Name
+                    </option>
+
+                    <option value="title">
+                        Job Title
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- JOB LIST -->
+
+            <div id="jobList">
+
+                <!-- Jobs will load here -->
+
+            </div>
+
+
+            <!-- NO JOBS -->
+
+            <div
+                id="noJobs"
+                class="no-jobs"
+                style="display:none;"
+            >
+
+                <div class="no-jobs-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    No jobs found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ATTRACTIVE CTA ================= -->
+
+    <section
+        class="jobs-cta"
+        style="
+            width: 90%;
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 60px 30px;
+            box-sizing: border-box;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+        "
+    >
+
+        <div
+            style="
+                text-align: center;
+                color: white;
+            "
+        >
+
+            <span
+                style="
+                    display: inline-block;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    margin-bottom: 15px;
+                "
+            >
+                🚀 START YOUR JOURNEY
+            </span>
+
+
+            <h2
+                style="
+                    color: white;
+                    font-size: 34px;
+                    margin: 0 0 15px;
+                "
+            >
+                Looking for your next opportunity?
+            </h2>
+
+
+            <p
+                style="
+                    color: rgba(255,255,255,0.9);
+                    font-size: 16px;
+                    margin: 0 0 30px;
+                "
+            >
+                Create your free profile and start applying today.
+            </p>
+
+
+            <a
+                href="register.html"
+                style="
+                    display: inline-block;
+                    padding: 14px 30px;
+                    background: white;
+                    color: #5d45c5;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 15px;
+                    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+                "
+            >
+                Create Profile →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

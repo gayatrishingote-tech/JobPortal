@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Details | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="jobs.html">
+                Jobs
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= JOB DETAILS HEADER ================= -->
+
+    <section class="job-details-header">
+
+        <div class="job-details-header-content">
+
+            <span class="section-label">
+                JOB DETAILS
+            </span>
+
+            <h1 id="detailJobTitle">
+                Loading...
+            </h1>
+
+            <p id="detailCompany">
+                Loading company...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOB DETAILS ================= -->
+
+    <main class="job-details-main">
+
+
+        <section class="job-details-card">
+
+
+            <!-- JOB INFORMATION -->
+
+            <div class="job-detail-info">
+
+                <div class="job-detail-item">
+
+                    <span class="detail-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Location
+                        </small>
+
+                        <strong id="detailLocation">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-detail-item">
+
+                    <span class="detail-icon">
+                        💼
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Job Type
+                        </small>
+
+                        <strong id="detailJobType">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-detail-item">
+
+                    <span class="detail-icon">
+                        💰
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Salary
+                        </small>
+
+                        <strong id="detailSalary">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-detail-item">
+
+                    <span class="detail-icon">
+                        🎯
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Experience
+                        </small>
+
+                        <strong id="detailExperience">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="job-detail-section">
+
+                <h2>
+                    Skills Required
+                </h2>
+
+                <p id="detailSkills">
+                    -
+                </p>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="job-detail-section">
+
+                <h2>
+                    Job Description
+                </h2>
+
+                <p id="detailDescription">
+                    -
+                </p>
+
+            </div>
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="job-detail-actions">
+
+                <button
+                    type="button"
+                    id="detailApplyButton"
+                    class="apply-job-button"
+                >
+                    Apply Now
+                </button>
+
+
+                <button
+                    type="button"
+                    id="detailSaveButton"
+                    class="save-job-button"
+                >
+                    ⭐ Save Job
+                </button>
+
+
+                <a
+                    href="jobs.html"
+                    class="back-jobs-button"
+                >
+                    ← Back to Jobs
+                </a>
+
+            </div>
+
+
+            <p
+                id="detailMessage"
+                class="detail-message"
+            ></p>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

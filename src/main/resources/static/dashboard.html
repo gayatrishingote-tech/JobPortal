@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="jobs.html">
+                Jobs
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= DASHBOARD HEADER ================= -->
+
+    <section class="dashboard-header">
+
+        <div class="dashboard-header-content">
+
+            <span class="section-label">
+                MY ACCOUNT
+            </span>
+
+            <h1>
+                Welcome to Your Dashboard
+            </h1>
+
+            <p>
+                Manage your profile, applications and saved jobs
+                from one place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard-main">
+
+
+        <!-- PROFILE CARD -->
+
+        <section class="dashboard-card profile-card">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <h2>
+                        My Profile
+                    </h2>
+
+                    <p>
+                        Your account information
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="profile-item">
+
+                    <span>
+                        Name
+                    </span>
+
+                    <strong id="dashboardName">
+                        Guest User
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="dashboardEmail">
+                        Not logged in
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="dashboard-button"
+                id="logoutButton"
+            >
+                Logout
+            </button>
+
+        </section>
+
+
+        <!-- APPLICATIONS CARD -->
+
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <h2>
+                        My Applications
+                    </h2>
+
+                    <p>
+                        Track your job applications
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="myApplications">
+
+                <p class="dashboard-empty">
+                    Login and apply for jobs to see your applications here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SAVED JOBS CARD -->
+
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    ⭐
+                </div>
+
+                <div>
+
+                    <h2>
+                        Saved Jobs
+                    </h2>
+
+                    <p>
+                        Jobs you saved for later
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="savedJobs">
+
+                <p class="dashboard-empty">
+                    Your saved jobs will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="dashboard-card quick-actions">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                    <p>
+                        Continue your job search
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-action-buttons">
+
+                <a
+                    href="jobs.html"
+                    class="dashboard-action"
+                >
+                    🔍 Browse Jobs
+                </a>
+
+
+                <a
+                    href="register.html"
+                    class="dashboard-action"
+                >
+                    👤 Update Profile
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="jobs.html">Jobs</a>
+
+            <a href="login.html">Login</a>
+
+            <a href="register.html" class="active">Register</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="admin.html">Admin</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= REGISTER PAGE ================= -->
+
+    <main class="register-page">
+
+        <div class="register-container">
+
+
+            <!-- ================= LEFT SIDE ================= -->
+
+            <section class="register-info">
+
+                <div class="register-brand">
+                    Job<span>Portal</span>
+                </div>
+
+                <span class="register-label">
+                    BUILD YOUR CAREER
+                </span>
+
+                <h1>
+                    Create your account
+                    <span>and get started.</span>
+                </h1>
+
+                <p>
+                    Join JobPortal and explore opportunities
+                    that match your skills, interests and
+                    career goals.
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="register-features">
+
+                    <div class="register-feature">
+
+                        <div class="feature-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Explore career opportunities
+                            </strong>
+
+                            <span>
+                                Discover jobs from different
+                                companies and industries.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-feature">
+
+                        <div class="feature-icon">
+                            🚀
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Apply with ease
+                            </strong>
+
+                            <span>
+                                Find a suitable job and apply
+                                directly through your account.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-feature">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Manage your career
+                            </strong>
+
+                            <span>
+                                Track applications and manage
+                                your saved opportunities.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAREER MESSAGE -->
+
+                <div class="register-highlight">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            One account. More opportunities.
+                        </strong>
+
+                        <p>
+                            Start exploring your next career move.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <section class="register-form-section">
+
+                <div class="register-form-card">
+
+
+                    <!-- HEADER -->
+
+                    <div class="register-form-header">
+
+                        <div class="form-top-icon">
+                            ✨
+                        </div>
+
+                        <span class="register-form-label">
+                            CREATE PROFILE
+                        </span>
+
+                        <h2>
+                            Let's get started
+                        </h2>
+
+                        <p>
+                            Create your free JobPortal account
+                            in just a few steps.
+                        </p>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <form id="registerForm">
+
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="registerName">
+                                Full Name
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    👤
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="registerName"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="registerEmail">
+                                Email Address
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    ✉️
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    placeholder="Enter your email address"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="registerPassword">
+                                Password
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    🔒
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    placeholder="Create a secure password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+
+                        <div class="register-check">
+
+                            <input
+                                type="checkbox"
+                                id="registerTerms"
+                                required
+                            >
+
+                            <label for="registerTerms">
+                                I agree to the JobPortal terms
+                                and privacy policy.
+                            </label>
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="register-submit-button"
+                        >
+
+                            Create Account
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <!-- MESSAGE -->
+
+                        <p
+                            id="registerMessage"
+                            class="auth-message"
+                        ></p>
+
+
+                    </form>
+
+
+                    <!-- LOGIN LINK -->
+
+                    <div class="register-login">
+
+                        <span>
+                            Already have an account?
+                        </span>
+
+                        <a href="login.html">
+                            Sign in
+                        </a>
+
+                    </div>
+
+
+                    <!-- SECURITY -->
+
+                    <div class="register-security">
+
+                        <span>
+                            🛡️
+                        </span>
+
+                        <p>
+                            Your personal information is
+                            securely protected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

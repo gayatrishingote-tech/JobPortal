@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="jobs.html">Jobs</a>
+
+            <a href="login.html">Login</a>
+
+            <a href="register.html">Register</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="admin.html" class="active">Admin</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= ADMIN PAGE ================= -->
+
+    <main class="admin-page">
+
+        <div class="admin-container">
+
+
+            <!-- ================= LEFT SIDE ================= -->
+
+            <section class="admin-info">
+
+                <div class="admin-brand">
+                    Job<span>Portal</span>
+                </div>
+
+                <span class="admin-label">
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Manage your
+                    <span>platform.</span>
+                </h1>
+
+                <p>
+                    Access the JobPortal administration panel
+                    to manage job opportunities, candidates
+                    and applications.
+                </p>
+
+
+                <!-- ADMIN FEATURES -->
+
+                <div class="admin-features">
+
+                    <div class="admin-feature">
+
+                        <div class="admin-feature-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Job Management
+                            </strong>
+
+                            <span>
+                                Add, update and manage
+                                job opportunities.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-feature">
+
+                        <div class="admin-feature-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Candidate Management
+                            </strong>
+
+                            <span>
+                                View registered candidates
+                                and their information.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-feature">
+
+                        <div class="admin-feature-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Application Tracking
+                            </strong>
+
+                            <span>
+                                Review applications and
+                                update candidate status.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECURITY BOX -->
+
+                <div class="admin-security">
+
+                    <span>
+                        🔒
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Secure Administrator Access
+                        </strong>
+
+                        <p>
+                            Authorized personnel only
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <section class="admin-form-section">
+
+                <div class="admin-form-card">
+
+
+                    <!-- HEADER -->
+
+                    <div class="admin-form-header">
+
+                        <div class="admin-login-icon">
+                            🔐
+                        </div>
+
+                        <span class="admin-small-label">
+                            ADMIN PORTAL
+                        </span>
+
+                        <h2>
+                            Welcome, Administrator
+                        </h2>
+
+                        <p>
+                            Sign in to access the
+                            JobPortal management dashboard.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+
+                    <form id="adminLoginForm">
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="adminEmail">
+                                Admin Email
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    ✉️
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="adminEmail"
+                                    placeholder="Enter admin email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="adminPassword">
+                                Password
+                            </label>
+
+                            <div class="input-with-icon">
+
+                                <span>
+                                    🔑
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="adminPassword"
+                                    placeholder="Enter admin password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOGIN BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="admin-login-button"
+                        >
+
+                            Access Admin Panel
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <!-- MESSAGE -->
+
+                        <p
+                            id="adminLoginMessage"
+                            class="auth-message"
+                        ></p>
+
+                    </form>
+
+
+                    <!-- SECURITY NOTICE -->
+
+                    <div class="admin-login-footer">
+
+                        <span>
+                            🛡️
+                        </span>
+
+                        <p>
+                            This area is restricted to
+                            authorized administrators.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

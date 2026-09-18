@@ -1,0 +1,65 @@
+JOB PORTAL - ER DIAGRAM
+
+
+1. USERS
+-------------------------
+id          (Primary Key)
+name
+email       (Unique)
+password
+
+
+2. JOBS
+-------------------------
+id          (Primary Key)
+title
+company
+location
+job_type
+salary
+experience
+skills
+description
+category
+
+
+3. APPLICATIONS
+-------------------------
+id          (Primary Key)
+user_id
+job_id
+application_date
+status
+
+
+4. SAVED_JOBS
+-------------------------
+id          (Primary Key)
+user_id
+job_id
+saved_date
+
+
+5. ADMINS
+-------------------------
+id          (Primary Key)
+name
+email       (Unique)
+password
+
+
+RELATIONSHIPS
+-------------------------
+
+USERS 1 -------- MANY APPLICATIONS
+
+JOBS  1 -------- MANY APPLICATIONS
+
+USERS 1 -------- MANY SAVED_JOBS
+
+JOBS  1 -------- MANY SAVED_JOBS
+
+
+ADMIN
+-------------------------
+Admin manages Jobs and Applications.

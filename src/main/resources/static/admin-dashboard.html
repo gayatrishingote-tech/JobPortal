@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="admin-dashboard.html" class="active">Admin</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HEADER -->
+    <section class="dashboard-header">
+
+        <div class="dashboard-header-content">
+
+            <span class="section-label">
+                ADMIN PANEL
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Manage jobs, users and applications from one place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+
+        <!-- STATISTICS -->
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    📊
+                </div>
+
+                <div>
+                    <h2>
+                        Dashboard Overview
+                    </h2>
+
+                    <p>
+                        JobPortal statistics
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="profile-item">
+
+                    <span>
+                        Total Jobs
+                    </span>
+
+                    <strong id="totalJobs">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Total Users
+                    </span>
+
+                    <strong id="totalUsers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Total Applications
+                    </span>
+
+                    <strong id="totalApplications">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                    <p>
+                        Manage JobPortal
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-action-buttons">
+
+                <button
+                    type="button"
+                    class="dashboard-action"
+                    id="adminAddJobButton">
+                    ➕ Add New Job
+                </button>
+
+
+                <button
+                    type="button"
+                    class="dashboard-action"
+                    id="viewJobsButton">
+                    💼 Manage Jobs
+                </button>
+
+
+                <button
+                    type="button"
+                    class="dashboard-action"
+                    id="viewUsersButton">
+                    👥 View Users
+                </button>
+
+
+                <button
+                    type="button"
+                    class="dashboard-action"
+                    id="viewApplicationsButton">
+                    📋 View Applications
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADD NEW JOB ================= -->
+
+        <section
+            class="admin-panel-card"
+            id="addJobSection">
+
+            <div class="admin-panel-header">
+
+                <div>
+
+                    <span class="section-label">
+                        JOB MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Add New Job
+                    </h2>
+
+                    <p>
+                        Create a new job or internship opportunity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="addJobForm"
+                class="admin-job-form">
+
+
+                <div class="admin-form-grid">
+
+
+                    <!-- JOB TITLE -->
+                    <div class="form-group">
+
+                        <label for="jobTitle">
+                            Job Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="jobTitle"
+                            placeholder="e.g. Java Developer"
+                            required>
+
+                    </div>
+
+
+                    <!-- COMPANY -->
+                    <div class="form-group">
+
+                        <label for="jobCompany">
+                            Company
+                        </label>
+
+                        <input
+                            type="text"
+                            id="jobCompany"
+                            placeholder="e.g. TCS"
+                            required>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+                    <div class="form-group">
+
+                        <label for="jobLocation">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="jobLocation"
+                            placeholder="e.g. Pune"
+                            required>
+
+                    </div>
+
+
+                    <!-- JOB TYPE -->
+                    <div class="form-group">
+
+                        <label for="jobType">
+                            Job Type
+                        </label>
+
+                        <select
+                            id="jobType"
+                            required>
+
+                            <option value="">
+                                Select Job Type
+                            </option>
+
+                            <option value="Full Time">
+                                Full Time
+                            </option>
+
+                            <option value="Part Time">
+                                Part Time
+                            </option>
+
+                            <option value="Internship">
+                                Internship
+                            </option>
+
+                            <option value="Remote">
+                                Remote
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SALARY -->
+                    <div class="form-group">
+
+                        <label for="jobSalary">
+                            Salary
+                        </label>
+
+                        <input
+                            type="text"
+                            id="jobSalary"
+                            placeholder="e.g. ₹6-10 LPA"
+                            required>
+
+                    </div>
+
+
+                    <!-- EXPERIENCE -->
+                    <div class="form-group">
+
+                        <label for="jobExperience">
+                            Experience
+                        </label>
+
+                        <select
+                            id="jobExperience"
+                            required>
+
+                            <option value="">
+                                Select Experience
+                            </option>
+
+                            <option value="Fresher">
+                                Fresher
+                            </option>
+
+                            <option value="0-2 Years">
+                                0-2 Years
+                            </option>
+
+                            <option value="2-4 Years">
+                                2-4 Years
+                            </option>
+
+                            <option value="4+ Years">
+                                4+ Years
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+                    <div class="form-group">
+
+                        <label for="jobCategory">
+                            Category
+                        </label>
+
+                        <select
+                            id="jobCategory"
+                            required>
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Software Development">
+                                Software Development
+                            </option>
+
+                            <option value="Data & Analytics">
+                                Data & Analytics
+                            </option>
+
+                            <option value="AI & Machine Learning">
+                                AI & Machine Learning
+                            </option>
+
+                            <option value="Cloud & DevOps">
+                                Cloud & DevOps
+                            </option>
+
+                            <option value="Software Testing">
+                                Software Testing
+                            </option>
+
+                            <option value="Design & Creative">
+                                Design & Creative
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SKILLS -->
+                    <div class="form-group">
+
+                        <label for="jobSkills">
+                            Skills
+                        </label>
+
+                        <input
+                            type="text"
+                            id="jobSkills"
+                            placeholder="Java, Spring Boot, MySQL"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+                <div class="form-group">
+
+                    <label for="jobDescription">
+                        Job Description
+                    </label>
+
+                    <textarea
+                        id="jobDescription"
+                        rows="5"
+                        placeholder="Enter job description"
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-add-job-button">
+
+                    ➕ Add Job
+
+                </button>
+
+
+                <p
+                    id="addJobMessage"
+                    class="auth-message">
+                </p>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= MANAGE JOBS ================= -->
+
+        <section
+            class="admin-panel-card"
+            id="manageJobsSection">
+
+            <div class="admin-panel-header">
+
+                <div>
+
+                    <span class="admin-small-label">
+                        JOB MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Manage Jobs
+                    </h2>
+
+                    <p>
+                        View, edit and delete job opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="adminJobList"
+                class="admin-data-area">
+
+                <p class="dashboard-empty">
+                    Loading jobs...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= USERS ================= -->
+
+        <section
+            class="dashboard-card"
+            id="usersSection"
+            style="display: none;">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <h2>
+                        Registered Users
+                    </h2>
+
+                    <p>
+                        View JobPortal users
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="adminUsers">
+
+                <p class="dashboard-empty">
+                    Loading users...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATIONS ================= -->
+
+        <section
+            class="dashboard-card"
+            id="applicationsSection"
+            style="display: none;">
+
+            <div class="dashboard-card-header">
+
+                <div class="dashboard-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <h2>
+                        Job Applications
+                    </h2>
+
+                    <p>
+                        View and manage applications
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="adminApplications">
+
+                <p class="dashboard-empty">
+                    Loading applications...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOGOUT ================= -->
+
+        <section class="dashboard-card">
+
+            <button
+                type="button"
+                class="dashboard-button"
+                id="adminLogoutButton">
+
+                Logout
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

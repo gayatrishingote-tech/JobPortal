@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =================================================
+           LOGIN PAGE
+           ================================================= */
+
+        .login-page {
+            min-height: calc(100vh - 72px);
+            padding: 55px 7%;
+            display: flex;
+            align-items: center;
+            background: #f7f7fc;
+            box-sizing: border-box;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 1100px;
+            min-height: 600px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            border-radius: 24px;
+
+            border: 1px solid #e6e6f0;
+
+            box-shadow:
+                0 25px 70px rgba(49, 46, 129, 0.14);
+        }
+
+
+        /* =================================================
+           LEFT SIDE
+           ================================================= */
+
+        .login-left {
+            position: relative;
+
+            padding: 55px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(196, 181, 253, 0.35),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(129, 140, 248, 0.25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    145deg,
+                    #312e81,
+                    #4f46a5,
+                    #6366f1
+                );
+
+            color: white;
+        }
+
+        .login-left-content {
+            width: 100%;
+        }
+
+
+        /* BRAND */
+
+        .login-brand {
+            margin-bottom: 55px;
+
+            font-size: 25px;
+            font-weight: 800;
+
+            color: white;
+        }
+
+        .login-brand span {
+            color: #c4b5fd;
+        }
+
+
+        /* LABEL */
+
+        .login-label {
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+            color: #ddd6fe;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* HEADING */
+
+        .login-left h1 {
+            max-width: 480px;
+
+            margin: 0 0 20px;
+
+            color: white;
+
+            font-size: 40px;
+            line-height: 1.15;
+        }
+
+        .login-left h1 span {
+            display: block;
+
+            color: #ddd6fe;
+        }
+
+
+        /* DESCRIPTION */
+
+        .login-left-content > p {
+            max-width: 470px;
+
+            margin: 0;
+
+            color: #ede9fe;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           BENEFITS
+           ================================================= */
+
+        .login-benefits {
+            margin-top: 35px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .login-benefit {
+            display: flex;
+            align-items: center;
+
+            gap: 14px;
+        }
+
+        .login-benefit-icon {
+            width: 44px;
+            height: 44px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.11);
+
+            border: 1px solid rgba(255,255,255,0.16);
+
+            font-size: 19px;
+        }
+
+        .login-benefit strong {
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: white;
+
+            font-size: 13px;
+        }
+
+        .login-benefit span {
+            display: block;
+
+            color: #ddd6fe;
+
+            font-size: 10px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =================================================
+           STATS
+           ================================================= */
+
+        .login-stats {
+            max-width: 470px;
+
+            margin-top: 38px;
+
+            padding-top: 24px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            border-top:
+                1px solid rgba(255,255,255,0.18);
+        }
+
+        .login-stats div {
+            padding-left: 15px;
+
+            border-right:
+                1px solid rgba(255,255,255,0.15);
+        }
+
+        .login-stats div:first-child {
+            padding-left: 0;
+        }
+
+        .login-stats div:last-child {
+            border-right: none;
+        }
+
+        .login-stats strong {
+            display: block;
+
+            color: white;
+
+            font-size: 20px;
+        }
+
+        .login-stats span {
+            display: block;
+
+            margin-top: 4px;
+
+            color: #ddd6fe;
+
+            font-size: 10px;
+        }
+
+
+        /* =================================================
+           RIGHT SIDE
+           ================================================= */
+
+        .login-right {
+            padding: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #ffffff;
+        }
+
+        .login-card {
+            width: 100%;
+
+            max-width: 390px;
+        }
+
+
+        /* =================================================
+           LOGIN HEADER
+           ================================================= */
+
+        .login-header {
+            margin-bottom: 28px;
+        }
+
+        .login-icon {
+            width: 58px;
+            height: 58px;
+
+            margin-bottom: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5f3ff,
+                    #ede9fe
+                );
+
+            border: 1px solid #ddd6fe;
+
+            color: #6366f1;
+
+            font-size: 25px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(99,102,241,0.12);
+        }
+
+        .login-small-label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #6366f1;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+        .login-header h2 {
+            margin: 0 0 8px;
+
+            color: #172033;
+
+            font-size: 29px;
+        }
+
+        .login-header p {
+            margin: 0;
+
+            color: #667085;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =================================================
+           FORM
+           ================================================= */
+
+        .login-form-group {
+            margin-bottom: 19px;
+        }
+
+        .login-form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #344054;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .login-input {
+            height: 50px;
+
+            padding: 0 14px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            border: 1px solid #d9d9e5;
+
+            border-radius: 10px;
+
+            background: white;
+
+            box-sizing: border-box;
+
+            transition: 0.2s;
+        }
+
+        .login-input:focus-within {
+            border-color: #6366f1;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(99,102,241,0.09);
+        }
+
+        .login-input > span {
+            width: 20px;
+
+            color: #6b7280;
+
+            text-align: center;
+
+            font-size: 15px;
+        }
+
+        .login-input input {
+            width: 100%;
+            height: 100%;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            color: #172033;
+
+            font-size: 13px;
+        }
+
+        .login-input input::placeholder {
+            color: #98a2b3;
+        }
+
+
+        /* =================================================
+           PASSWORD
+           ================================================= */
+
+        .password-label {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .password-label a {
+            margin-bottom: 8px;
+
+            color: #6366f1;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .password-label a:hover {
+            color: #4f46e5;
+        }
+
+
+        /* =================================================
+           REMEMBER ME
+           ================================================= */
+
+        .login-options {
+            margin: 3px 0 20px;
+        }
+
+        .login-options label {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: #667085;
+
+            font-size: 10px;
+
+            cursor: pointer;
+        }
+
+        .login-options input {
+            accent-color: #6366f1;
+        }
+
+
+        /* =================================================
+           LOGIN BUTTON
+           ================================================= */
+
+        .login-button {
+            width: 100%;
+            height: 51px;
+
+            padding: 0 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6366f1,
+                    #4f46e5
+                );
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 24px
+                rgba(99,102,241,0.23);
+
+            transition: 0.2s;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 30px
+                rgba(99,102,241,0.30);
+        }
+
+        .login-button b {
+            font-size: 19px;
+
+            font-weight: 400;
+        }
+
+
+        /* =================================================
+           MESSAGE
+           ================================================= */
+
+        .login-message {
+            min-height: 20px;
+
+            margin: 10px 0;
+
+            text-align: center;
+
+            font-size: 11px;
+        }
+
+
+        /* =================================================
+           CREATE ACCOUNT
+           ================================================= */
+
+        .login-register-box {
+            margin-top: 22px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            border:
+                1px solid #e6e7ef;
+
+            border-radius: 11px;
+
+            background: #fafaff;
+        }
+
+        .login-register-box p {
+            margin: 0 0 10px;
+
+            color: #667085;
+
+            font-size: 10px;
+        }
+
+        .create-account-button {
+            height: 39px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            border:
+                1px solid #ddd6fe;
+
+            border-radius: 8px;
+
+            background: white;
+
+            color: #6366f1;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+        .create-account-button:hover {
+            background: #f5f3ff;
+
+            border-color: #c4b5fd;
+        }
+
+
+        /* =================================================
+           SECURITY
+           ================================================= */
+
+        .login-security {
+            margin-top: 18px;
+
+            padding-top: 17px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            border-top:
+                1px solid #edf0f4;
+        }
+
+        .login-security span {
+            font-size: 14px;
+        }
+
+        .login-security p {
+            margin: 0;
+
+            color: #98a2b3;
+
+            font-size: 9px;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+           ================================================= */
+
+        @media (max-width: 900px) {
+
+            .login-container {
+                grid-template-columns: 1fr;
+            }
+
+            .login-left {
+                padding: 45px;
+            }
+
+            .login-right {
+                padding: 45px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .login-page {
+                padding: 25px 5%;
+            }
+
+            .login-left {
+                padding: 35px 25px;
+            }
+
+            .login-right {
+                padding: 35px 22px;
+            }
+
+            .login-left h1 {
+                font-size: 31px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Job<span>Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="jobs.html">
+                Jobs
+            </a>
+
+            <a href="login.html" class="active">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="admin.html">
+                Admin
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+
+            <!-- ================= LEFT PANEL ================= -->
+
+            <section class="login-left">
+
+                <div class="login-left-content">
+
+
+                    <div class="login-brand">
+                        Job<span>Portal</span>
+                    </div>
+
+
+                    <span class="login-label">
+                        WELCOME BACK
+                    </span>
+
+
+                    <h1>
+
+                        Your career journey
+
+                        <span>
+                            continues here.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Sign in to discover new opportunities,
+                        apply for jobs and manage your career
+                        journey from one place.
+
+                    </p>
+
+
+                    <!-- BENEFITS -->
+
+                    <div class="login-benefits">
+
+
+                        <div class="login-benefit">
+
+                            <div class="login-benefit-icon">
+                                🔎
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Discover Jobs
+                                </strong>
+
+                                <span>
+                                    Find opportunities that
+                                    match your skills.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="login-benefit">
+
+                            <div class="login-benefit-icon">
+                                🚀
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Apply Easily
+                                </strong>
+
+                                <span>
+                                    Apply to jobs directly
+                                    from your account.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="login-benefit">
+
+                            <div class="login-benefit-icon">
+                                📊
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Track Applications
+                                </strong>
+
+                                <span>
+                                    Keep track of your
+                                    application status.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="login-stats">
+
+
+                        <div>
+
+                            <strong>
+                                100+
+                            </strong>
+
+                            <span>
+                                Jobs
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                50+
+                            </strong>
+
+                            <span>
+                                Companies
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                24/7
+                            </strong>
+
+                            <span>
+                                Opportunities
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RIGHT LOGIN ================= -->
+
+            <section class="login-right">
+
+                <div class="login-card">
+
+
+                    <!-- HEADER -->
+
+                    <div class="login-header">
+
+                        <div class="login-icon">
+                            ✦
+                        </div>
+
+                        <span class="login-small-label">
+                            CANDIDATE LOGIN
+                        </span>
+
+                        <h2>
+                            Welcome back
+                        </h2>
+
+                        <p>
+                            Sign in to continue to your
+                            JobPortal account.
+                        </p>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <form id="loginForm">
+
+
+                        <!-- EMAIL -->
+
+                        <div class="login-form-group">
+
+                            <label for="loginEmail">
+                                Email Address
+                            </label>
+
+                            <div class="login-input">
+
+                                <span>
+                                    ✉
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    placeholder="Enter your email address"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="login-form-group">
+
+                            <div class="password-label">
+
+                                <label for="loginPassword">
+                                    Password
+                                </label>
+
+                                <a href="forgot-password.html">
+                                    Forgot password?
+                                </a>
+
+                            </div>
+
+
+                            <div class="login-input">
+
+                                <span>
+                                    🔒
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    placeholder="Enter your password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REMEMBER -->
+
+                        <div class="login-options">
+
+                            <label>
+
+                                <input
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="login-button"
+                        >
+
+                            <span>
+                                Sign In
+                            </span>
+
+                            <b>
+                                →
+                            </b>
+
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- MESSAGE -->
+
+                    <p
+                        id="loginMessage"
+                        class="login-message"
+                    ></p>
+
+
+                    <!-- REGISTER -->
+
+                    <div class="login-register-box">
+
+                        <p>
+                            Don't have a JobPortal account?
+                        </p>
+
+                        <a
+                            href="register.html"
+                            class="create-account-button"
+                        >
+
+                            Create an account
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- SECURITY -->
+
+                    <div class="login-security">
+
+                        <span>
+                            🛡️
+                        </span>
+
+                        <p>
+                            Your account information is
+                            securely protected.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="simple-footer">
+
+        <div class="simple-footer-inner">
+
+            <div class="footer-logo">
+                Job<span>Portal</span>
+            </div>
+
+            <p>
+                © 2026 JobPortal. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
